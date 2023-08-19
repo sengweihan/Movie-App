@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div>
-      <h1 className="header-title">My Contacts</h1>
+      <h1 className="header-title">Movie Database</h1>
       <div className="search-bar">
         <input
           className="search-input"
