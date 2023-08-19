@@ -6,7 +6,7 @@ function App() {
   const [movieTitle, setMovieTitle] = useState("");
   const [sendMovieTitle, setSendMovieTitle] = useState("");
   const [movies, setMovies] = useState([]);
-  const API_URL = "http://www.omdbapi.com?apikey=10adcacc";
+  const API_URL = "https://www.omdbapi.com?apikey=10adcacc";
 
   const fetchMovies = async () => {
     const responses = await fetch(
