@@ -8,5 +8,5 @@ A project to create a simple movie app
 * ReactJS
 
 ## LIVE DEMO 
-[react-movie-project-app.netlify.app ](https://react-movie-project-app.netlify.app/)https://react-movie-project-app.netlify.app/ 
+https://react-movie-project-app.netlify.app/  
 
