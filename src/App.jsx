@@ -13,7 +13,7 @@ function App() {
       API_URL + `&s=${sendMovieTitle ? sendMovieTitle : "batman"}`
     );
     const data = await responses.json();
-    setMovies(data.Search);
+    setMovies(data.Search ? data.Search : []);
     console.log(data);
   };
 
@@ -27,19 +27,20 @@ function App() {
 
   return (
     <div>
-      <h1 class="font-mono text-2xl tracking-wider text-center">My Contacts</h1>
-      <div class="flex gap-x-3 justify-center items-center">
+      <h1 className="header-title">My Contacts</h1>
+      <div className="search-bar">
         <input
+          className="search-input"
           type="text"
-          placeholder="Enter a movie name"
+          placeholder="Enter a movie name..."
           name="movie-title"
           value={movieTitle}
           onChange={(e) => setMovieTitle(e.target.value)}
         />
-        <BiSearch onClick={handleSearch} />
+        <BiSearch className="search-icon" onClick={handleSearch} />
       </div>
 
-      <div class="grid grid-cols-3 gap-4 mt-5">
+      <div className="cards-component">
         {movies.length > 0 ? (
           movies.map((movie) => {
             return (
@@ -48,6 +49,7 @@ function App() {
                 title={movie.Title}
                 year={movie.Year}
                 poster={movie.Poster}
+                type={movie.Type}
               />
             );
           })
